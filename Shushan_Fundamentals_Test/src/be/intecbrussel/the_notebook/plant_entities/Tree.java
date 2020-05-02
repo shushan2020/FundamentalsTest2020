@@ -8,6 +8,8 @@ public class Tree extends Plant {
 		super(name);
 	}
 
+	// this constructor contains property of super class Plant and property of
+	// Tree plant
 	public Tree(String name, double height, LeafType leafType) {
 		super(name, height);
 		this.leafType = leafType;

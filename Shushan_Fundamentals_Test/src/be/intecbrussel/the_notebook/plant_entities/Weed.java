@@ -9,6 +9,8 @@ public class Weed extends Plant {
 
 	}
 
+	// this constructor contains property of super class Plant and property of
+	// Weed plant
 	public Weed(String name, double height, double area) {
 		super(name, height);
 		this.area = area;

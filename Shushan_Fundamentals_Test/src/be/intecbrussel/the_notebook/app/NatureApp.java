@@ -30,6 +30,7 @@ public class NatureApp {
 		plantDiet.addPlantToDiet(tree);
 		plantDiet.addPlantToDiet(weed);
 		plantDiet.addPlantToDiet(blackthorn);
+		// printing plantDiet
 		plantDiet.printDiet();
 		System.out.println("======================================================\n");
 		// Adding Animals

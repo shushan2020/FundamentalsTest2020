@@ -20,6 +20,8 @@ public class Omnivore extends Animal {
 
 	}
 
+	// this constructor contains property of super class Animal and property of
+	// Omnivore animal
 	public Omnivore(String name, double weight, double height, double length, double maxFoodSize,
 			Set<Plant> plantDiets) {
 		super(name, weight, height, length);

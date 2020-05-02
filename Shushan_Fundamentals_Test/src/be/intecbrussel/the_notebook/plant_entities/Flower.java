@@ -9,6 +9,8 @@ public class Flower extends Plant {
 
 	}
 
+	// this constructor contains property of super class Plant and property of
+	// Flower plant
 	public Flower(String name, double height, Scent smell) {
 		super(name, height);
 		this.smell = smell;

@@ -17,6 +17,8 @@ public class Herbivore extends Animal {
 		super(name, weight, height, length);
 	}
 
+	// this constructor contains property of super class Animal and property of
+	// Herbivore animal
 	public Herbivore(String name, double weight, double height, double length, Set<Plant> plantDiets) {
 		super(name, weight, height, length);
 		this.plantDiets = plantDiets;

@@ -13,6 +13,8 @@ public class Carnivore extends Animal {
 
 	}
 
+	// this constructor contains property of super class Animal and property of
+	// Carnivore animal
 	public Carnivore(String name, double weight, double height, double length, double maxFoodSize) {
 		super(name, weight, height, length);
 		this.maxFoodSize = maxFoodSize;

@@ -16,6 +16,8 @@ public class Bush extends Plant {
 
 	}
 
+	// this constructor contains property of super class Plant and property of
+	// Bush plant
 	public Bush(String name, String fruit, double height, LeafType leafType) {
 		super(name, height);
 		this.fruit = fruit;
