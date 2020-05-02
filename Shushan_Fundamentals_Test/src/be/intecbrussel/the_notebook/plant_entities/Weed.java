@@ -26,7 +26,8 @@ public class Weed extends Plant {
 	@Override
 	public String toString() {
 
-		return String.format("name=" + super.getName() + ", height=" + super.getHeight() +" Meter"+ ", area=" + area +" squareMeter" );
+		return String.format("Plant [Weed [Name=" + super.getName() + ", height=" + super.getHeight() + "Meter "
+				+ ", area=" + area + "squareMeter " + "]");
 
 	}
 

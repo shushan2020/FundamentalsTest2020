@@ -2,16 +2,11 @@ package be.intecbrussel.the_notebook.service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-
 import be.intecbrussel.the_notebook.animal_entities.Animal;
 import be.intecbrussel.the_notebook.animal_entities.Carnivore;
 import be.intecbrussel.the_notebook.animal_entities.Herbivore;
 import be.intecbrussel.the_notebook.animal_entities.Omnivore;
-
 import be.intecbrussel.the_notebook.plant_entities.Plant;
 
 public class ForestNoteBook {
@@ -53,8 +48,6 @@ public class ForestNoteBook {
 	}
 
 	public int getPlantCount() {
-		// plants = new ArrayList<Plant>();
-		// plantCount = (int) this.plants.stream().count();
 		return plantCount = plants.size();
 	}
 
@@ -66,20 +59,14 @@ public class ForestNoteBook {
 	// Adding Animal
 	public void addAnimal(Animal animal) {
 		addAnimalCheck(animal);
-//		animals.add(animal);
-//		if (animal instanceof Carnivore)
-//			carnivores.add((Carnivore) animal);
-//		else if (animal instanceof Herbivore)
-//			herbivores.add((Herbivore) animal);
-//		else
-//			omnivores.add((Omnivore) animal);
-
 	}
 
+	// Checking if Animal is already exist,
+	// if not it will added in the correct internal list
 	public void addAnimalCheck(Animal animal) {
 
 		if (animals.contains(animal))
-			System.out.println("duplicate is not allowed");
+			System.out.println("Animal is already exist!!!");
 		else {
 			animals.add(animal);
 			if (animal instanceof Carnivore)
@@ -93,9 +80,10 @@ public class ForestNoteBook {
 
 	// Adding Plants
 	public void addPlant(Plant plant) {
-
-		this.plants.add(plant);
-
+		if (!plants.contains(plant)) {
+			this.plants.add(plant);
+		} else
+			System.out.println("Plant is already exist!!!\n");
 	}
 
 	// Printing Printing Carnivore
@@ -121,19 +109,16 @@ public class ForestNoteBook {
 
 	// Printing Animals and Plants
 	public void printNoteBook() {
-		System.out.println("****Printing Animals****");
+		System.out.println("****Printing Animals****\n");
 		for (Animal animal : animals) {
 			System.out.println(animal);
 		}
-
-		System.out.println("****Printing Plants****");
+		System.out.println();
+		System.out.println("****Printing Plants****\n");
 
 		for (Plant plant : plants) {
 			System.out.println(plant);
 		}
-		sortAnimalsByName();
-		sortPlantsByName();
-
 	}
 
 	// Sorting Animals By Name
@@ -154,7 +139,7 @@ public class ForestNoteBook {
 
 	}
 
-	// Sorting Plants By Name
+	// Sorting Plants By Height
 	public void sortPlantsByHeight() {
 		this.plants.stream().sorted(Comparator.comparing(Plant::getHeight)).forEach(System.out::println);
 

@@ -30,9 +30,9 @@ public class Carnivore extends Animal {
 	@Override
 	public String toString() {
 
-
-		return String.format("Animals [Carnivore[name=" + super.getName() + ", weight=" + super.getWeight()+" Kg" + ", height="
-				+ super.getHeight()+" M" + ", length=" + super.getLength() +" M"+ ", maxFoodSize=" + maxFoodSize +" Kg"+ "]");
+		return String.format("Animals [Carnivore[name=" + super.getName() + ", weight=" + super.getWeight() + "Kg "
+				+ ", height=" + super.getHeight() + "M " + ", length=" + super.getLength() + "M " + ", maxFoodSize="
+				+ maxFoodSize + "Kg " + "]");
 	}
 
 }

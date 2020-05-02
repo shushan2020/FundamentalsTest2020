@@ -25,7 +25,8 @@ public class Tree extends Plant {
 	@Override
 	public String toString() {
 
-		return String.format("name=" + super.getName() + ", height=" + super.getHeight() +" Meter"+ ", leafType=" + leafType );
+		return String.format("Plant [Tree [Name=" + super.getName() + ", height=" + super.getHeight() + "Meter "
+				+ ", leafType=" + leafType + "]");
 
 	}
 

@@ -7,7 +7,7 @@ import be.intecbrussel.the_notebook.plant_entities.Plant;
 
 public class Herbivore extends Animal {
 
-	private Set<Plant> plantDiets=new HashSet<Plant>();
+	private Set<Plant> plantDiets = new HashSet<Plant>();
 
 	public Herbivore(String name) {
 		super(name);
@@ -44,13 +44,10 @@ public class Herbivore extends Animal {
 
 	@Override
 	public String toString() {
-		
-		return String.format("Animals [Herbivore[name=" + super.getName() + ", weight=" + super.getWeight()+" Kg" + ", height="
-				+ super.getHeight()+" M" + ", length=" + super.getLength() +" M"+ ", plantDiets=" + plantDiets+ "]");
 
-//		return "Animals [Herbivore[name=" + super.getName() + ", weight=" + super.getWeight() + ", height="
-//				+ super.getHeight() + ", length=" + super.getLength() + ", plantDiets=" + plantDiets + "]";
-
+		return String.format("Animals [Herbivore[name=" + super.getName() + ", weight=" + super.getWeight() + "Kg "
+				+ ", height=" + super.getHeight() + "M " + ", length=" + super.getLength() + "M " + ", plantDiets="
+				+ plantDiets + "]");
 	}
 
 }
